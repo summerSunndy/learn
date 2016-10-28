@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <script type="text/javascript" src="./jquery-2.1.4.js"></script>
+    </head>
+    <body>
+    </body>
+    <script type="text/javascript">
+    // function asyncEvent() {
+    //   var dfd = jQuery.Deferred();
+    //
+    //   setTimeout(function() {
+    //     dfd.resolve( "hurray" );
+    //   }, Math.floor( 400 + Math.random() * 2000 ) );
+    //
+    //
+    //   setTimeout(function() {
+    //     dfd.reject( "sorry" );
+    //   }, Math.floor( 400 + Math.random() * 2000 ) );
+    //
+    //
+    //   setTimeout(function working() {
+    //     if ( dfd.state() === "pending" ) {
+    //       dfd.notify( "working... " );
+    //       setTimeout( working, 500 );
+    //     }
+    //   }, 1 );
+    //
+    //
+    //   return dfd.promise();
+    // }
+    //
+    //
+    // $.when( asyncEvent() ).then(
+    //   function( status ) {
+    //     alert( status + ", things are going well" );
+    //   },
+    //   function( status ) {
+    //     alert( status + ", you fail this time" );
+    //   },
+    //   function( status ) {
+    //     $( "body" ).append( status );
+    //   }
+    // );
+    function a(aa){
+      $( "body" ).append(aa);
+    }
+    function b(aa){
+      $( "body" ).append(aa);
+    }
+    var callbacks = $.Callbacks()
+    callbacks.fire()
+    console.log(callbacks.fired())
+    callbacks.add(a)
+    callbacks.fire('简单！！')
+    // 后追加的不会被执行
+    callbacks.add(b)
+    // 判断是否被执行过了
+    callbacks.fire('同一个参数被所有callback使用！！','另一个参数')
+    // callbacks.disable()
+    // callbacks.fire()
+    callbacks.remove(a,b)
+    console.log(callbacks.has(b))
+    // 当被置空或删除完，不会报错
+    callbacks.fire()
+    </script>
+</html>
