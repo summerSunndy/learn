@@ -1,0 +1,32 @@
+{
+  "name": "iwjw-base",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --config ./build/webpack.config.js",
+    "recreate:dir":"",
+  },
+  "keywords": [],
+  "author": "mengyue",
+  "license": "ISC",
+  "dependencies": {
+    "babel-loader": "^6.2.5"
+  },
+  "devDependencies": {
+    "babel-core": "^6.17.0",
+    "babel-loader": "^6.2.5",
+    "babel-preset-es2015": "^6.16.0",
+    "babel-preset-stage-0": "^6.16.0",
+    "babel-preset-stage-2": "^6.17.0",
+    "css-loader": "^0.25.0",
+    "es6-promise": "^4.0.5",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "serialize-javascript": "^1.3.0",
+    "vue-loader": "^9.7.0",
+    "webpack": "^1.13.2",
+    "webpack-dev-middleware": "^1.8.4",
+    "webpack-hot-middleware": "^2.13.0",
+    "webpack-notifier": "^1.4.1"
+  }
+}
