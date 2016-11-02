@@ -1,54 +1,45 @@
 @charset "UTF-8";
 
 @import
-  // Ionicons
-  "ionicons/ionicons.scss",
+  "./ionicons/ionicons.scss",
 
-  // Variables
-  "mixins",
-  "variables",
 
-  // Base
-  "reset",
-  "scaffolding",
-  "type",
+  "./_mixins.scss",
+  "./_variables.scss",
 
-  // Components
-  "action-sheet",
-  "backdrop",
-  "bar",
-  "tabs",
-  "menu",
-  "modal",
-  "popover",
-  "popup",
-  "loading",
-  "items",
-  "list",
-  "badge",
-  "slide-box",
-  "refresher",
-  "spinner",
 
-  // Forms
-  "form",
-  "checkbox",
-  "toggle",
-  "radio",
-  "range",
-  "select",
-  "progress",
+  "./_reset.scss",
+  "./_scaffolding.scss",
+  "./_type.scss",
 
-  // Buttons
-  "button",
-  "button-bar",
 
-  // Util
-  "grid",
-  "util",
-  "platform",
-  "dialog",
+  "./_bar.scss",
+  "./_tabs.scss",
+  "./_menu.scss",
+  "./_modal.scss",
+  "./_popover.scss",
+  "./_popup.scss",
+  "./_loading.scss",
+  "./_items.scss",
+  "./_list.scss",
+  "./_badge.scss",
+  "./_slide-box.scss",
 
-  // Animations
-  "animations",
-  "transitions";
+  
+  "./_form.scss",
+  "./_checkbox.scss",
+  "./_toggle.scss",
+  "./_radio.scss",
+  "./_range.scss",
+  "./_select.scss",
+
+  "./_button.scss",
+  "./_button-bar.scss",
+
+  "./_grid.scss",
+  "./_util.scss",
+  "./_platform.scss",
+  "./_dialog.scss",
+
+  "./_animations.scss",
+  "./_transitions.scss";
