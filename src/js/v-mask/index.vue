@@ -1,5 +1,5 @@
 <template>
-	<div class="mask"  @click="hideOnBlur && (show = false)" :transition="maskTransition">
+	<div class="mask" v-show="show" @click="hideOnBlur && (show = false)" :transition="maskTransition">
 	</div>
 </template>
 
@@ -11,10 +11,9 @@ export default {
 			type: String,
 			default: 'vux-fade'
 		},
-	},
-	watch: {
-		show (val) {
-			this.$emit(val ? 'on-show' : 'on-hide')
+		show: {
+			type: Boolean,
+			default: true
 		}
 	},
 	method:{
@@ -24,3 +23,6 @@ export default {
 	}
 }
 </script>
+<style>
+@import "./_mask.scss"
+</style>

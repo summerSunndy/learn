@@ -3,11 +3,16 @@
     <vMask v-if="hasMask"></vMask>
     <div class="dialog" v-show="show" @touchmove="!this.scroll && $event.preventDefault()">
         <div :class="type" :transition="dialogTransition">
-            <div class="dialog-title" v-if="hasTitle">
+            <div class="dialog-head" v-if="hasTitle">
                 {{title}}
                 <i class="dialig-close" v-if="hasClose"></i>
             </div>
-            <slot></slot>
+            <div class="dialog-body">
+                <slot></slot>
+            </div>
+            <div class="dialog-foot">
+                <slot name="foot"></slot>
+            </div>
         </div>
     </div>
 </div>
@@ -15,6 +20,7 @@
 
 <script>
 import vMask from 'js/v-mask'
+let path = require('path');
 export default {
     name:'v-dialog',
     components:{
@@ -33,15 +39,10 @@ export default {
             type: Boolean,
             default: true
         },
-        maskTransition: {
-            type: String,
-            default: 'vux-fade'
-        },
         dialogTransition: {
             type: String,
             default: 'vux-dialog'
         },
-        hideOnBlur: Boolean,
         scroll: {
             type: Boolean,
             default: true
@@ -58,11 +59,10 @@ export default {
             type: Boolean,
             default: true
         }
-    },
-    watch: {
-        show (val) {
-            this.$emit(val ? 'on-show' : 'on-hide')
-        }
     }
 }
 </script>
+<style lang="sass">
+@import "../../scss/ionic.scss";
+@import "./_dialog.scss";
+</style>

@@ -14,7 +14,7 @@ module.exports = {
     // ],
     entry: {
         main: './docs/index.js',
-        base: './src/scss/ionic.scss'
+        // base: './src/scss/ionic.scss'
     },
     output: {
         path: path.resolve(__dirname, '../dist'),
@@ -47,6 +47,10 @@ module.exports = {
             { 
                 test: /\.scss$/i, 
                 loader: ExtractTextPlugin.extract(['css','sass']) 
+                // loader: ExtractTextPlugin.extract(
+                //     "style",
+                //     "css?sourceMap!postcss!sass?sourceMap"
+                // )
             }, 
             {
                test: /\.css$/,

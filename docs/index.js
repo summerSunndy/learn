@@ -10,13 +10,16 @@ const Bar = { template: '<div>bar</div>' }
 // children还可配置下一级，name指定视图，components指定多个视图，default为默认；或router-view中name指定的。
 // redirect重定向，路径或name或方法
 const routes = {
-    mode: 'history',
+    mode: 'abstract',  //history hash  abstract
     routes: [
         {
             path :'/docs', 
             component:  entry
         },
-        {path :'/dialog', component: dialog}
+        {
+            path :'/dialog', 
+            component: dialog
+        }
     ]
 }
 Vue.use(vueRouter)

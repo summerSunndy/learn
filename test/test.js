@@ -1,12 +1,5 @@
-var assert = require('assert');
-describe('Array', function(){
-    describe('#indexOf()', function(){
-        it('should return -1 when value is not present', function(){
-            assert.equal(-1, [1,2,3].indexOf(4))
-        })
-    })
-})
-// 
-// describe('hooks && shoud', function(){
-//     
-// })
+describe("start",function(){
+    it("should return true",function(){
+        expect(Reverse("abc")).to.equal("cba");
+    });      
+});
